@@ -1,0 +1,19 @@
+[INFO ] 13:18:44.381 c.e.demo.ApiserverDevApplication - Starting ApiserverDevApplication using Java 17.0.5 with PID 14344 (C:\workspace\apiserver_dev\bin\main started by gilse in C:\workspace\apiserver_dev)
+[INFO ] 13:18:44.382 c.e.demo.ApiserverDevApplication - No active profile set, falling back to 1 default profile: "default"
+[WARN ] 13:18:44.591 o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+[INFO ] 13:18:44.658 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 13:18:44.659 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 13:18:44.659 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 13:18:44.660 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+[INFO ] 13:18:44.680 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 13:18:44.680 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 294 ms
+[INFO ] 13:18:44.924 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 13:18:44.926 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 13:18:44.935 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 13:18:44.939 c.e.demo.ApiserverDevApplication - Started ApiserverDevApplication in 0.588 seconds (process running for 369.584)
+[INFO ] 13:18:44.939 o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 13:18:53.086 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 13:18:53.086 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 13:18:53.087 o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[INFO ] 13:18:53.088 c.example.demo.info.InfoController - return com.example.demo.info.model.Project@3044b73f
+[INFO ] 13:19:09.865 c.example.demo.info.InfoController - return com.example.demo.info.model.Project@41de5997

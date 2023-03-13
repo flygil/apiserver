@@ -1,0 +1,24 @@
+[INFO ] 13:15:55.873 c.e.demo.ApiserverDevApplication - Starting ApiserverDevApplication using Java 17.0.5 with PID 14344 (C:\workspace\apiserver_dev\bin\main started by gilse in C:\workspace\apiserver_dev)
+[INFO ] 13:15:55.873 c.e.demo.ApiserverDevApplication - No active profile set, falling back to 1 default profile: "default"
+[WARN ] 13:15:56.107 o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+[INFO ] 13:15:56.169 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 13:15:56.170 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 13:15:56.171 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 13:15:56.173 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+[INFO ] 13:15:56.199 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 13:15:56.200 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 325 ms
+[INFO ] 13:15:56.341 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 13:15:56.345 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 13:15:56.350 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 13:15:56.355 c.e.demo.ApiserverDevApplication - Started ApiserverDevApplication in 0.553 seconds (process running for 201.001)
+[INFO ] 13:15:56.356 o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 13:16:08.344 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 13:16:08.344 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 13:16:08.345 o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[INFO ] 13:16:08.347 c.example.demo.info.InfoController - return com.example.demo.info.model.Project@309c9a6f
+[INFO ] 13:18:00.463 o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 13:18:00.470 o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[INFO ] 13:18:00.470 o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[INFO ] 13:18:00.471 o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 13:18:00.473 o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO ] 13:18:00.474 o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
