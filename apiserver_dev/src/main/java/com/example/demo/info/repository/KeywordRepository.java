@@ -10,7 +10,7 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.info.model.Keyword;
+import com.example.demo.info.model.KeywordData;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -25,7 +25,7 @@ public class KeywordRepository {
 		this.keywordRowMapper = new KeywordRowMapper();
 	}
 	
-	public List<Keyword> findList(){
+	public List<KeywordData> findList(){
 		//String keywordSql = "select * from keyword limit 1000";
 		
 		log.debug("findList query : {}", KeywordSql.SELECT);
@@ -35,7 +35,7 @@ public class KeywordRepository {
 												, this.keywordRowMapper);
 	}	
 	
-	public List<Keyword> findKeywordByPK(Integer userID, String keyword){
+	public List<KeywordData> findKeywordByPK(Integer userID, String keyword){
 		//String keywordSql = "select * from keyword limit 1000";
 		
 		log.debug("findList query : {}", KeywordSql.SELECT
@@ -51,7 +51,7 @@ public class KeywordRepository {
 				, this.keywordRowMapper);
 	}	
 	
-	public Keyword insert(Keyword keyword) {
+	public KeywordData insert(KeywordData keyword) {
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		SqlParameterSource parameterSource = new MapSqlParameterSource("userID", keyword.getUserID())
 				.addValue("keyword", keyword.getKeyword())
@@ -66,7 +66,7 @@ public class KeywordRepository {
 		return keyword;
 	}
 	
-	public Integer updateByPK(Keyword keyword) {
+	public Integer updateByPK(KeywordData keyword) {
 		
 		SqlParameterSource parameterSource = new MapSqlParameterSource("ID", keyword.getID())
 				.addValue("userID", keyword.getUserID())

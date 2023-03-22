@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.info.model.Keyword;
+import com.example.demo.info.domain.Keyword;
+import com.example.demo.info.model.KeywordData;
 import com.example.demo.info.model.Project;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -72,10 +73,18 @@ public class InfoController {
 	
 	
 	@GetMapping("/keywordList")
-	public Object GetKeywordList() {
+	public Object getKeywordList() {
 		log.debug("/keywordList start");
 		
-		List<Keyword> keywordList = this.infoService.getKeywordList();
+		List<KeywordData> keywordList = this.infoService.getKeywordList();
+		return keywordList;
+	}
+	
+	@GetMapping("/keywordListByMybatis")
+	public Object getKeywordListByMybatis() {
+		log.debug("/keywordListByMybatis start");
+		
+		List<Keyword> keywordList = this.infoService.getKeywordListByMybatis();
 		return keywordList;
 	}
 	
@@ -85,7 +94,7 @@ public class InfoController {
 		log.debug("/keywordByPK start");
 		log.debug("userID = {}, keyword = {}", userID, keyword);
 		
-		List<Keyword> keywordList = this.infoService.findKeywordByPK(userID, keyword);
+		List<KeywordData> keywordList = this.infoService.findKeywordByPK(userID, keyword);
 		return keywordList;
 	}
 	
@@ -140,11 +149,11 @@ public class InfoController {
 	 */
 	
 	@PostMapping(value="keywordAdd")
-	public ResponseEntity<Keyword> keywordAdd(Integer userID, String keyword, String userName, String startDate, String endDate, Integer targetPrice, String useYN) {
+	public ResponseEntity<KeywordData> keywordAdd(Integer userID, String keyword, String userName, String startDate, String endDate, Integer targetPrice, String useYN) {
 		try {
 			log.debug("userID = {}, keyword = {}, userName = {}, startDate = {}, endDate = {}, targetPrice = {}, useYN = {}"
 					, userID, keyword, userName, startDate, endDate, targetPrice, useYN);
-			Keyword keywordObj = new Keyword();
+			KeywordData keywordObj = new KeywordData();
 			keywordObj.setUserID(userID);
 			keywordObj.setKeyword(keyword);
 			keywordObj.setUserName(userName);
@@ -165,7 +174,7 @@ public class InfoController {
 		try {
 			log.debug("ID = {}, userID = {}, keyword = {}, userName = {}, startDate = {}, endDate = {}, targetPrice = {}, useYN = {}"
 					,ID, userID, keyword, userName, startDate, endDate, targetPrice, useYN);
-			Keyword keywordObj = new Keyword();
+			KeywordData keywordObj = new KeywordData();
 			keywordObj.setID(ID);
 			keywordObj.setUserID(userID);
 			keywordObj.setKeyword(keyword);

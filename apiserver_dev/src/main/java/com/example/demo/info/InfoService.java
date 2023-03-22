@@ -6,7 +6,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.info.model.Keyword;
+import com.example.demo.info.domain.Keyword;
+import com.example.demo.info.mapper.KeywordMapper;
+import com.example.demo.info.model.KeywordData;
 import com.example.demo.info.model.Project;
 import com.example.demo.info.repository.KeywordRepository;
 
@@ -19,8 +21,12 @@ public class InfoService {
 	@Autowired
 	private final KeywordRepository keywordRepository;
 	
-	public InfoService(KeywordRepository keywordRepository) {
+	@Autowired
+	private final KeywordMapper keywordMapper;
+	
+	public InfoService(KeywordRepository keywordRepository, KeywordMapper keywordMapper) {
 		this.keywordRepository = keywordRepository;
+		this.keywordMapper = keywordMapper;
 	}
 
 	public Project getProjectInfo() {
@@ -32,23 +38,27 @@ public class InfoService {
 		return project;
 	}
 	
-	public List<Keyword> getKeywordList() {
+	public List<KeywordData> getKeywordList() {
 		
 		return this.keywordRepository.findList();
 	}
 	
-	public List<Keyword> findKeywordByPK(Integer userID, String keyword) {
+	public List<KeywordData> findKeywordByPK(Integer userID, String keyword) {
 		
 		return this.keywordRepository.findKeywordByPK(userID, keyword);
 	}
 	
-	public Keyword insert(Keyword keyword) {
+	public KeywordData insert(KeywordData keyword) {
 		return this.keywordRepository.insert(keyword);
 	}
 	
-	public Integer updateByPK(Keyword keyword) {
+	public Integer updateByPK(KeywordData keyword) {
 		log.debug("keyword = {}", keyword.toString());
 		return this.keywordRepository.updateByPK(keyword);
+	}
+	
+	public List<Keyword> getKeywordListByMybatis() {
+		return keywordMapper.keywordListByMybatis();
 	}
 	
 }

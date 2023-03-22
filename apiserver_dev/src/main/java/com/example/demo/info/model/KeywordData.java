@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Keyword {
+public class KeywordData {
 	private Integer ID;
 	private Integer userID;
 	private String userName;

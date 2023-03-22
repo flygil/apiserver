@@ -5,12 +5,12 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.example.demo.info.model.Keyword;
+import com.example.demo.info.model.KeywordData;
 
-public class KeywordRowMapper implements RowMapper<Keyword>{
+public class KeywordRowMapper implements RowMapper<KeywordData>{
 	@Override
-	public Keyword mapRow(ResultSet rs, int rowNum) throws SQLException {
-		Keyword keyword = new Keyword();
+	public KeywordData mapRow(ResultSet rs, int rowNum) throws SQLException {
+		KeywordData keyword = new KeywordData();
 		keyword.setUserID(rs.getInt("user_id"));
 		keyword.setUserName(rs.getString("user_name"));
 		keyword.setKeyword(rs.getString("keyword"));
